@@ -1,0 +1,106 @@
+html, body {
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+}
+
+section h1 {
+  font-size:150px;
+  text-align: center;
+}
+
+#blend {
+  background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1378&q=80');
+}
+
+#blend h1 {
+  mix-blend-mode: overlay;
+}
+
+#filter {
+  position:relative;
+}
+
+#filter:before {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-image: url('https://images.unsplash.com/photo-1511135232973-c3ee80040060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+  filter: grayscale(100%) blur(3px);
+}
+
+#filter h1 {
+  z-index: 1;
+}
+
+#overlay {
+  background-image: url('https://images.unsplash.com/photo-1520645521318-f03a712f0e67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  position:relative;
+}
+
+#overlay:before {
+  position:absolute;
+  content:'';
+  width:100%;
+  height:100%;
+  background:black;
+  opacity:0.5
+}
+
+#overlay h1 {
+  color:white;
+  z-index: 1;
+}
+
+#animation {
+  background-image: url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+}
+
+@keyframes japan {
+  0%   {
+    opacity: 0;
+  }
+  25%   {
+    margin-top:50px;
+    transform: rotate(-5deg);
+  }
+  50%   {
+    font-size:180px;
+    color:red;
+  }
+  75%   {
+    opacity: 1;
+  }
+}
+
+#animation h1 {
+  color: white;
+  animation-name: japan;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+}
+
+#parallax {
+  background-image: url('https://images.unsplash.com/photo-1457195740896-7f345efef228?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-attachment: fixed;
+}
+
+#parallax h1 {
+  color:white;
+}
